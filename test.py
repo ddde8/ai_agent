@@ -73,6 +73,7 @@ response = client.chat.completions.create(
                 "in which the product looks best. Please give a detailed and objective description.\n\n"
                 "# Finally\n"
                 "Please output your predicted value in JSON format."
+                "Please analyze the product and the background *separately*, and do not assume the current background is optimal. Recommend the best possible background based on product aesthetics, not what you see in the image." #배경과 분리해서 분석해달라고 추가함
             )
         },
         {
