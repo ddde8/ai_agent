@@ -1,38 +1,3 @@
-# from openai import OpenAI
-# from dotenv import load_dotenv
-# import os
-
-# load_dotenv()
-# api_key = os.getenv('OPEN_API_KEY')
-# client = OpenAI(api_key=api_key)
-
-# response = client.chat.completions.create(
-#     model="gpt-4",  # "gpt-5"는 현재 존재하지 않음 (GPT-4 또는 GPT-4o 사용 권장)
-#     temperature=0.9,
-#     messages=[
-#         {
-#             "role": "system",
-#             "content": (
-#                 "You are a professional designer. What you see is a product. "
-#                 "You need to follow the instructions below:\n\n"
-#                 "# <front description>\n"
-#                 "Please give a description of the product.\n\n"
-#                 "# <back description>\n"
-#                 "Please use professional designer aesthetics to describe the background "
-#                 "in which the product looks best. Please give a detailed and objective description.\n\n"
-#                 "# Finally\n"
-#                 "Please output your predicted value in JSON format."
-#             )
-#         },
-#         {
-#             "role": "user",
-#             "content": "#유저가 물어보는 말"
-#         }
-#     ]
-# )
-
-# print(response.choices[0].message.content)
-
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
