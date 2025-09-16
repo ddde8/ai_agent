@@ -12,7 +12,7 @@ templates = Jinja2Templates(directory="templates/")
 async def add_todo(request: Request, todo: Todo = Depends(Todo.as_form)):
     todo.id = len(todo_list) + 1
     todo_list.append(todo)
-    return templates.TemplateResponse(
+    return templates.TemplateResponse("todo.html",
         {
             "request": request,
             "todos": todo_list
