@@ -1,10 +1,9 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional, List
 from fastapi import Form
 
-
 class Todo(BaseModel):
-    id: Optional[int]
+    id: Optional[int] = None  # Make sure to provide a default value
     item: str
 
     @classmethod
@@ -13,7 +12,7 @@ class Todo(BaseModel):
         item: str = Form(...)
     ):
         return cls(item=item)
-    
+
 class Item(BaseModel):
     item: str
     status: str
